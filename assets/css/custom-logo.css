@@ -1,0 +1,83 @@
+/* Custom Logo Styling */
+.header-logo {
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.header-logo--compact {
+    height: 36px;
+    width: auto;
+}
+
+.header-logo--icon {
+    height: 32px;
+    width: 32px;
+}
+
+/* Responsive: Show compact logo on larger screens, icon-only on mobile */
+@media (min-width: 640px) {
+    .header-logo--mobile-only {
+        display: none;
+    }
+    .header-logo--desktop {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 639px) {
+    .header-logo--mobile-only {
+        display: inline-flex;
+    }
+    .header-logo--desktop {
+        display: none;
+    }
+}
+
+/* Hover effect - subtle glow pulse for audio branding theme */
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .header-logo:hover img {
+        filter: drop-shadow(0 0 8px rgba(154, 146, 217, 0.6));
+        animation: subtle-pulse 2s ease-in-out infinite;
+    }
+}
+
+@keyframes subtle-pulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 8px rgba(154, 146, 217, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(176, 122, 242, 0.7));
+    }
+}
+
+/* Ensure logo stays sharp at all sizes */
+.header-logo img {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+/* Floating Sirens Animation */
+.floating-sirens {
+    display: inline-block;
+}
+
+/* Underline for Marketing text */
+.underline-marketing {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .floating-sirens {
+        animation: none !important;
+    }
+}
