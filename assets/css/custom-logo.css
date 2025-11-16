@@ -6,13 +6,16 @@
 }
 
 .header-logo--compact {
-    height: 36px;
+    height: 48px;
     width: auto;
+    object-fit: contain;
 }
 
 .header-logo--icon {
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 /* Responsive: Show compact logo on larger screens, icon-only on mobile */
@@ -41,17 +44,17 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .header-logo:hover img {
-        filter: drop-shadow(0 0 8px rgba(154, 146, 217, 0.6));
+        filter: drop-shadow(0 0 8px rgba(200, 200, 200, 0.6));
         animation: subtle-pulse 2s ease-in-out infinite;
     }
 }
 
 @keyframes subtle-pulse {
     0%, 100% {
-        filter: drop-shadow(0 0 8px rgba(154, 146, 217, 0.4));
+        filter: drop-shadow(0 0 8px rgba(200, 200, 200, 0.4));
     }
     50% {
-        filter: drop-shadow(0 0 12px rgba(176, 122, 242, 0.7));
+        filter: drop-shadow(0 0 12px rgba(220, 220, 220, 0.7));
     }
 }
 
